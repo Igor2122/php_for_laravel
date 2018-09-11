@@ -60,6 +60,8 @@ require 'functions.php';
 
 check_guest_age($guest);
 
+require 'classes.php';
+
 
 
 

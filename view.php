@@ -92,8 +92,19 @@
 	<h3>You need to work on it</h3>
 <?php endif ?>
 
-<h2>Functions</h2>
+<h2>Tasks with OOP</h2>
 
+<ul>
+	<?php foreach ($tasks as $task) :?>
+		<li>
+			<?php if($task->completed): ?>
+			<strike><?= $task->descipiton; ?></strike>
+			<?php else :?> 
+				<?= $task->descipiton; ?>
+			<?php endif ?>
+		</li>
+	<?php endforeach ?>
+</ul>
 
 
 
