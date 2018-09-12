@@ -106,6 +106,7 @@
 	<?php endforeach ?>
 </ul>
 
+<h2>Interactinf with DP (PDO)</h2>
 
 
 

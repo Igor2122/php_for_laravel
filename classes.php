@@ -25,7 +25,7 @@ class Task {
 	public function readTheTask () 
 	{
 		// why we do not have to use return here to check the task 
-		return $this->descipiton;
+		$this->descipiton;
 	}
 
 }
