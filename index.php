@@ -64,9 +64,9 @@ require 'classes.php';
 
 
 try {
-	$pdo = new PDO('mysql:host=127.0.0.1;dbname=wordpress', 'root', 'root');
+	$pdo = new PDO('mysql:host=127.0.0.1;dbname=wordpress', 'root', '');
 	
-    // $myPDO = new PDO('pgsql:host=127.0.0.1;dbname=igor', 'igor', '2122');
+    $myPDO = new PDO('pgsql:host=127.0.0.1;dbname=igor', 'igor', '2122');
 	
 } catch (PDOException $e) {
 	// die('Could not connect ');
@@ -80,7 +80,7 @@ $statement->execute();
 $results = $statement->fetchAll(PDO::FETCH_OBJ);
 var_dump($results[0]->body);
 
-require 'view.php';
+require 'blog.php';
 
 
 

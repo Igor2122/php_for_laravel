@@ -13,6 +13,7 @@
 </head>
 <body>
 	<header>
+		<a href="blog-view.php">Blog</a>
 		<h1>
 			<?php 
 			// here we are accessign the superglobal
@@ -105,32 +106,6 @@
 		</li>
 	<?php endforeach ?>
 </ul>
-
-<h2>Interactinf with DP (PDO)</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
