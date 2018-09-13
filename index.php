@@ -62,25 +62,9 @@ require 'functions.php';
 
 require 'classes.php';
 
-
-try {
-	$pdo = new PDO('mysql:host=127.0.0.1;dbname=wordpress', 'root', '');
-	
-    $myPDO = new PDO('pgsql:host=127.0.0.1;dbname=igor', 'igor', '2122');
-	
-} catch (PDOException $e) {
-	// die('Could not connect ');
-	die($e->getMessage());
-}
-
-$statement = $myPDO->prepare('select * from products');
-
-$statement->execute();
-
-$results = $statement->fetchAll(PDO::FETCH_OBJ);
-var_dump($results[0]->body);
-
 require 'blog.php';
+
+
 
 
 

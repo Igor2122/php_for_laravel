@@ -10,16 +10,16 @@ try {
 	die($e->getMessage());
 }
 
-$statement = $myPDO->prepare('select * from products');
+$statement = $myPDO->prepare('select * from tasks');
 
 $statement->execute();
 
 $results = $statement->fetchAll(PDO::FETCH_OBJ);
-$firstResult = $results[0]->id;
 
-require 'blog.php';
-
+$firstResult = $results[0]->created_at;
 
 
 
-require 'blog-view.php';
+
+
+

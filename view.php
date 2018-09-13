@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<title>Basic Functionality</title>
 	<style>
 		header {
@@ -22,6 +26,7 @@
 			?>
 		</h1>
 	</header>	
+	<div class="container">
 		<h2>
 			<?= $names ?>
 		</h2>
@@ -107,6 +112,47 @@
 	<?php endforeach ?>
 </ul>
 
+<h2>Tasks with DB</h2>
+<div class="container ">
+<h3>Completed Tasks</h3>
+<div class="d-flex w-75 mt-5">
+		<?php foreach ($results as $result) :?>
+			<?php if(($result->status) == 1) :?>
+			<div class="card " style="width: 18rem;">
+			  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+			  <div class="card-body">
+			    <h5 class="card-title"><?= $result->task ?></h5>
+			    <h6 class="card-subtitle mb-2 text-success">
+			    	Completed &#9989
+			    </h6>
+			    <p class="card-text"><?= $result->description ?></p>
+			    <a href="#" class="btn btn-primary">See the post</a>
+			  </div>
+			</div>
+		</div>
+		<?php else :?>
+			<h3 class="mt-5">Ongoing Tasks</h3>
+			<div class="d-flex mt-5">
+			<div class="card " style="width: 18rem;">
+			  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+			  <div class="card-body">
+			    <h5 class="card-title"><?= $result->task ?></h5>
+			    <h6 class="card-subtitle mb-2 text-danger">
+			    	Get to Work &#9997
+			    </h6>
+			    <p class="card-text"><?= $result->description ?></p>
+			    <a href="#" class="btn btn-primary">See the post</a>
+			  </div>
+			</div>
+		<?php endif ?>
+			
+		<?php endforeach ?>
+</div>
+
+
+
+
+</div>
 
 
 
@@ -121,8 +167,12 @@
 
 
 
-
-
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
 

@@ -1,9 +1,5 @@
 <?php  
-	function died ($val) {
-		echo '<pre>';
-			die(var_dump($val));
-		echo '<pre>';
-	};
+	
 
 function check_guest_age ($shnuk) {
 	if($shnuk['age'] > 21) {
