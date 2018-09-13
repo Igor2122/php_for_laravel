@@ -1,5 +1,9 @@
 <?php 
 
+// connetct the task class
+require 'taskClass.php';
+require 'view.php';
+
 try {
 	// $pdo = new PDO('mysql:host=127.0.0.1;dbname=wordpress', 'root', 'root');
 	
@@ -14,9 +18,11 @@ $statement = $myPDO->prepare('select * from tasks');
 
 $statement->execute();
 
-$results = $statement->fetchAll(PDO::FETCH_OBJ);
+$results = $statement->fetchAll(PDO::FETCH_CLASS, 'TaskProgress');
 
-$firstResult = $results[0]->created_at;
+
+
+
 
 
 

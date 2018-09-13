@@ -115,44 +115,41 @@
 <h2>Tasks with DB</h2>
 <div class="container ">
 <h3>Completed Tasks</h3>
-<div class="d-flex w-75 mt-5">
+	<div class="d-flex justify-content-between w-75 mt-5">
 		<?php foreach ($results as $result) :?>
-			<?php if(($result->status) == 1) :?>
-			<div class="card " style="width: 18rem;">
-			  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-			  <div class="card-body">
-			    <h5 class="card-title"><?= $result->task ?></h5>
-			    <h6 class="card-subtitle mb-2 text-success">
-			    	Completed &#9989
-			    </h6>
-			    <p class="card-text"><?= $result->description ?></p>
-			    <a href="#" class="btn btn-primary">See the post</a>
-			  </div>
-			</div>
-		</div>
-		<?php else :?>
-			<h3 class="mt-5">Ongoing Tasks</h3>
-			<div class="d-flex mt-5">
-			<div class="card " style="width: 18rem;">
-			  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-			  <div class="card-body">
-			    <h5 class="card-title"><?= $result->task ?></h5>
-			    <h6 class="card-subtitle mb-2 text-danger">
-			    	Get to Work &#9997
-			    </h6>
-			    <p class="card-text"><?= $result->description ?></p>
-			    <a href="#" class="btn btn-primary">See the post</a>
-			  </div>
-			</div>
-		<?php endif ?>
-			
+			<?php if($result->status) :?>
+				<div class="card " style="width: 18rem;">
+				  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+				  <div class="card-body">
+				    <h5 class="card-title"><?= $result->task ?></h5>
+				    <h6 class="card-subtitle mb-2 text-success">
+				    	Completed &#9989
+				    </h6>
+				    <p class="card-text"><?= $result->description ?></p>
+				    <a href="#" class="btn btn-primary">See the post</a>
+				  </div>
+				</div>
+			<?php endif ?>
 		<?php endforeach ?>
-</div>
-
-
-
-
-</div>
+	</div>
+	<h3 class="mt-5">Ongoing Tasks</h3>
+	<div class="d-flex justify-content-between w-75 mt-5">
+		<?php foreach ($results as $result) :?>
+			<?php if(!$result->status) :?>
+				<div class="card " style="width: 18rem;">
+				  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+				  <div class="card-body">
+				    <h5 class="card-title"><?= $result->task ?></h5>
+				    <h6 class="card-subtitle mb-2 text-danger">
+				    	Get to Work
+				    </h6>
+				    <p class="card-text"><?= $result->description ?></p>
+				    <a href="#" class="btn btn-primary">See the post</a>
+				  </div>
+				</div>
+			<?php endif ?>
+		<?php endforeach ?>
+	</div>
 
 
 

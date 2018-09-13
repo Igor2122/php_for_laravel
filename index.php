@@ -60,7 +60,7 @@ require 'functions.php';
 
 // check_guest_age($guest);
 
-require 'classes.php';
+// require 'classes.php';
 
 require 'blog.php';
 
