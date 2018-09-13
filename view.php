@@ -17,7 +17,7 @@
 </head>
 <body>
 	<header>
-		<a href="blog-view.php">Blog</a>
+		<a href="/render_with_classes/opttwo.php">Blog</a>
 		<h1>
 			<?php 
 			// here we are accessign the superglobal

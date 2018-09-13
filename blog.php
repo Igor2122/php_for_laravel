@@ -1,8 +1,9 @@
 <?php 
 
 // connetct the task class
+require 'classes.php';
 require 'taskClass.php';
-require 'view.php';
+
 
 try {
 	// $pdo = new PDO('mysql:host=127.0.0.1;dbname=wordpress', 'root', 'root');
@@ -20,12 +21,4 @@ $statement->execute();
 
 $results = $statement->fetchAll(PDO::FETCH_CLASS, 'TaskProgress');
 
-
-
-
-
-
-
-
-
-
+// $results['3']->taskCompleted();

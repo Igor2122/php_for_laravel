@@ -57,7 +57,7 @@ if($task->isComplete()) { // checking the state of the task completion
 // why i cannot use this method on the array?
 $tasks['0']->taskComplete();
 
-require 'view.php';
+
 
 
 
