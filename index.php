@@ -55,8 +55,8 @@ $guest = [
 ];
 
 
-require 'functions.php';
-	// died($todo);
+
+
 
 // check_guest_age($guest);
 

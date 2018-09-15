@@ -40,9 +40,9 @@ $tasks = [
 
 $task = new Task('Go to store'); // instantiated a new task object
 // checking for the complete bul on the task object
-var_dump($task->isComplete());
+// var_dump($task->isComplete());
 // here we are calling the method on the obj task to read the task and dumping it to the page
-var_dump($task->readTheTask());
+// var_dump($task->readTheTask());
 
 
 $task->taskComplete(); // we did something and complted the task with taskComp.. method
