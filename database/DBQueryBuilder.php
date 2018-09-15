@@ -18,5 +18,10 @@ class  DBQueryBuilder
 		$statement->execute();
 		return $statement->fetchAll(PDO::FETCH_CLASS);
 	}
+
+	public function insert($table, $parameters) 
+	{
+		 
+	}
 }
 
