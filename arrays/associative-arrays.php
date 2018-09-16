@@ -1,4 +1,5 @@
 <?php 
+
 /* 
 	here we can access the user with the same key value pairs 
 	 $greeting =  'the user is'. htmlspecialchars($_GET['user']);
@@ -24,6 +25,8 @@ $person = [
 	'hair' => 'brown',
 	'position' => 'webdeveloper'
 ];
+
+
 // pushing new item to the []
 $person['name'] = 'Igor';
 
@@ -61,22 +64,3 @@ $guest = [
 // check_guest_age($guest);
 
 // require 'classes.php';
-
-require 'blog.php';
-
-// require 'taskClass.php';
-
-
-
-
-
-
-
-
-
-
-
-
-
-// here we will reqire all the view from the index.view.php to render on the index page 
-require 'view.php';
